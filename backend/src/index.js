@@ -4,10 +4,11 @@ import dotenv from "dotenv"
 import authRoutes from "./routes/auth.routes.js"
 import { connectDB } from "./lib/db.js"
 
+const app = express();
+
 dotenv.config()
 app.use(express.json())
 
-const app = express()
 const PORT = process.env.PORT || 5000
 
 app.use("/api/auth",authRoutes)
