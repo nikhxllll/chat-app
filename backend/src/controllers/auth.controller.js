@@ -80,10 +80,8 @@ export const logout = (req,res)=>{
         res.cookie("jwt","",{maxAge: 0});
         res.status(200).json({message:"Logout Successfully"})
     } catch (error) {
-
         console.log("ERROR IN Logout Controller",error.message)
         res.status(500).json({message:"Internal Server Error"})
-        
     }
 
 }
