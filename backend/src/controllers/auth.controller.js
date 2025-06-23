@@ -1,4 +1,3 @@
-import { json } from "express";
 import cloudinary from "../lib/cloudinary.js";
 import { generateToken } from "../lib/utils.js";
 import User from "../model/user.model.js"
@@ -111,5 +110,13 @@ export const updateProfile = async (req,res) =>{
         console.log("Error in Update User controller",error.message)
         res.status(500).json({message : " Internal Server Error"})
         
+    }
+}
+export const checkAuth = (req,res)=>{
+    try {
+        res.status(200).json(req.user)
+    } catch (error) {
+        console.log("Error in checkAuth Controller",error.message)
+        res.status(500).json({message:"Internal Server Error})
     }
 }
