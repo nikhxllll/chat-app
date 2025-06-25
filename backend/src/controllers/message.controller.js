@@ -49,7 +49,12 @@ export const sendMessage = async (req,res)=>{
             text,
             image:imageurl,
         })
+
+        await newMessage.save()
+
+        res.status(200).json(newMessage)
     } catch (error) {
-        
+        console.log("Error in sendMessage controller:",error.message)
+        res.status(500).json({message:"Internal Serval Error"})
     }
 }
