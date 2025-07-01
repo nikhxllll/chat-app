@@ -6,7 +6,11 @@ import SignUpPage from './pages/SignUpPage';
 import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
 import LoginPage from './pages/LoginPage';
+import { useAuthStore } from './store/useAuthStore';
+
+
 const App = () => {
+  const {authUser} = useAuthStore()
   return (
     <div >
       <Navbar />
