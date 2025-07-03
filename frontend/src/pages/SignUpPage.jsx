@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import AuthImagePattern from "../components/AuthImagePattern";
+import AuthImagePattern from "../comonents/AuthImagePattern";
 import toast from "react-hot-toast";
 
 const SignUpPage = () => {
@@ -21,7 +21,7 @@ const SignUpPage = () => {
     email: "",
     password: "",
   });
-  
+
   const { signup, isSigningUp } = useAuthStore();
 
   const validateForm = () => {
