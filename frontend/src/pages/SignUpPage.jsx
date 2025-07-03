@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const SignUpPage = () => {
-  return (
-    <div>
-      sup
-    </div>
-  )
-}
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFromData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+  });
+  return <div>sup</div>;
+};
 
-export default SignUpPage
+export default SignUpPage;
