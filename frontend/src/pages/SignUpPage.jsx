@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import AuthImagePattern from "../comonents/AuthImagePattern";
+import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
 
 const SignUpPage = () => {
